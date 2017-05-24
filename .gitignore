@@ -1,3 +1,7 @@
+cmake-build-debug/
+Brimus-Test/lib/gtest-1.7.0/
+.idea/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -13,6 +17,9 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.o
+*.exe
+
 
 # Windows shortcuts
 *.lnk

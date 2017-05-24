@@ -1,0 +1,14 @@
+
+How to use the cparser:
+
+TokenMap vars;
+    vars["x"] = 45;
+    calculator c1;
+    c1.compile("if(true,1,2)", vars);
+    cout << c1.eval(vars) << endl;
+    vars["x"] = 20;
+    cout << c1.eval(vars) << endl;
+    double answer = c1.eval(vars).asDouble();
+    cout << answer << endl;
+    calculator c2("5");
+    cout << c2.eval().asInt() << endl;
