@@ -1,0 +1,50 @@
+Functions the parser can process:
+
+print{} will print stuff to the screen
+comment{} everything in the brackets will be ignored
+assign{,} can save an int, double, boolean, or string
+launch_rule{} tick files for these days are run if available
+basket_rules{} symbol stat sheets are checked to decide what is traded
+basket_symbols{} static list of symbols, can also apply rules to them
+basket_ignore{} static list which is never traded
+order{} contains many sub rules to manage the order
+
+if(,,)
+max(x1,x2,...,xN)
+min(x1,x2,...,xN)
+sum(x1,x2,...,xN)
+avg(x1,x2,...,xN)
+
+open
+high
+low
+close
+
+open_order_count
+    all positions (all)
+    current position (one if not specified)
+    buy|sell (both if not specified)
+    specific stock ("XYZ")
+position_count
+    all positions (all if not specified)
+    current position (one)
+    long|short (both if not specified)
+    specific stock ("XYZ" each individual order which gets filled gets 1)
+pnl
+    all positions (all)
+    current position (one if not speified)
+    long|short (both if not specified)
+    specific stock ("XYZ")
+
+datetime
+    current_date()
+    current_time()
+    time_from_stock_open()
+    time_from_market_open()
+    second()
+    minute()
+    hour()
+    time() (9:30 or 9:30:30 6 digit military)
+
+built in variables
+    SS_MAX_SHARES   (SS stands for symbol side)

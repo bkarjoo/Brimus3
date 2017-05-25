@@ -1,0 +1,10 @@
+main
+
+use boost program options
+has --help command
+read input file(s), error if not provided
+read output directory if exists
+initialize strategy_tester class
+pass info to it
+call its run function
+

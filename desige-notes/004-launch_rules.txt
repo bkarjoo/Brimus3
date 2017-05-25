@@ -1,0 +1,16 @@
+
+future:iterations
+launch rule is parsed and the file names are output
+
+format
+
+CurrentDate > #2015-03-12#
+
+input strategy file is needed first
+Dates are converted to a file name
+Dates are converted to julian int
+CurrentDate becomes a cparse variable
+The script's dates are replaced with julian int
+the resulting script is used to construct a cparse calculator
+holidays are loaded and appended to the calculate statement
+    (calculate statement) AND NOT (CurrentDate = x || CurrentDate = x ...)

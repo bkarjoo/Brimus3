@@ -1,0 +1,12 @@
+* save the name of the files
+* save the name of the director
+
+future iterations :
+parses the input files using input_file_parser class
+files request a range of functions (place them in function map)
+function updated before rule check
+use boost observer utilities
+creates calculator parser for the basket rules (not symbol list)
+creates calculator parser for the launch rules
+creates calculator parsers for each order every tick
+creates a calculator parser for each variable

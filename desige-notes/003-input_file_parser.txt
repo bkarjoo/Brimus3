@@ -1,0 +1,22 @@
+all the file commands are converted to command objects
+all the comment commands are ignored
+
+future iterations:
+parses commands
+    7 categories as of now, 3 execution schedules
+read the entire file
+(tokenize the file use the tokenizer rules from untitled2)
+divide into tasks :
+    comments removed
+    commands executed once
+        basket_symbols{}
+        basket_ignore{}
+    commands executed before open
+        launch_rules{}
+        basket_rules{}
+    commands executed on each tick
+        print{}
+        assign{}
+        order{}
+
+

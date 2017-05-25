@@ -7,18 +7,10 @@
 
 #include "stdafx.h"
 
-/*
- * parses the input files
- * files request a range of functions (place them in function map)
- * function updated before rule check
- * use boost observer utilities
- * creates calculator parser for the basket rules (not symbol list)
- * creates calculator parser for the launch rules
- * creates calculator parsers for each order
- * creates a calculator parser for each variable
- */
-class strategy_tester {
 
+class strategy_tester {
+    std::vector<std::string> input_files;
+    std::string output_directory = "results";
 public:
     strategy_tester(const std::vector<std::string>& inputs);
     strategy_tester(const std::vector<std::string>& inputs, const std::string& output);

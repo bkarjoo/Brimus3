@@ -6,7 +6,11 @@
 #define BRIMUS3_STDAFX_H
 
 #include <iostream>
+#include <memory>
+#include <set>
 #include <string>
 #include <vector>
+
+#include <boost/tokenizer.hpp>
 
 #endif //BRIMUS3_STDAFX_H

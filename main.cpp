@@ -1,6 +1,7 @@
 #include <boost/program_options.hpp>
 #include <iostream>
 #include "strategy_tester.h"
+#include "shunting-yard.h"
 
 using namespace std;
 namespace po = boost::program_options;
