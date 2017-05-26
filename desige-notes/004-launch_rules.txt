@@ -1,8 +1,10 @@
+uses boost gregorian date
+
 
 future:iterations
 launch rule is parsed and the file names are output
 
-format
+format of primus style date
 
 CurrentDate > #2015-03-12#
 

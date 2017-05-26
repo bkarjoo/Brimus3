@@ -5,6 +5,9 @@
 #ifndef BRIMUS3_LAUNCH_RULES_H
 #define BRIMUS3_LAUNCH_RULES_H
 
+#include "stdafx.h"
+#include "cparse.h"
+
 /*
  * 1. converts the launch rules to gregorian date
  * 2. replaces the rules string with julian dates
@@ -13,7 +16,13 @@
  * 5. contains_date functions return bool for running the strategy
  */
 class launch_rules {
+    typedef boost::gregorian::date bdate;
 
+public:
+    bdate convert_to_gregorian(std::string primusDate);
+    std::string parse_launch_rules(std::string launchRules);
+
+    std::string get_launch_rule(const std::string &basic_string, int &i);
 };
 
 

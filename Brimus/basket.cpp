@@ -9,10 +9,10 @@ using namespace std;
 void basket::parse_basket(std::string basket_definition) {
     string s;
     for (auto a : basket_definition) {
-        if (a != '\n' && a != '\t' && a != 32) {
+        if (a != '\n' && a != '\t' && a != 32 && a != '{' && a != '}') {
             s += a;
         }
-        if (s != "" & (a == '\n' || a == '\t' || a == 32)) {
+        if (s != "" & (a == '\n' || a == '\t' || a == 32 || a == '}')) {
             symbols->insert(s);
             s = "";
         }

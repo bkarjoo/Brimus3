@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 
+#include <boost/date_time/gregorian/gregorian.hpp>
 #include <boost/tokenizer.hpp>
 
 #endif //BRIMUS3_STDAFX_H

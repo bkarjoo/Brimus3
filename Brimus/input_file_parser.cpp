@@ -84,7 +84,7 @@ void input_file_parser::parse_commands() {
             if (cp->name == "basket_rules" || cp->name == "launch_rules")
                 opening_commands->push_back(cp);
             if (cp->name == "basket_symbols" || cp->name == "basket_ignore")
-                opening_commands->push_back(cp);
+                once_commands->push_back(cp);
 
         } else
             break;

@@ -1,0 +1,5 @@
+used to capture basket symbols and ignore symbols
+add symbol
+has symbol
+parse
+
