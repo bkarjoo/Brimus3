@@ -18,11 +18,11 @@ class input_file_parser {
     std::string file;
 public:
     input_file_parser(std::string input_file);
-
+    // Once commands run at the begining of the strategy (symbol basket)
     std::vector<command *> *getOnce_commands() const;
-
+    // Opening commands run at the begining of every test day
     std::vector<command *> *getOpening_commands() const;
-
+    // tick commands run on every tick
     std::vector<command *> *getTick_commands() const;
 
     void parse_commands();

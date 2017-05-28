@@ -2,10 +2,12 @@
 #include <iostream>
 #include "strategy_tester.h"
 #include "shunting-yard.h"
+#include "launch_rules.h"
 
 using namespace std;
 namespace po = boost::program_options;
 int main(int argc, const char* argv[]) {
+
     po::options_description desc("test_strat.exe options");
     desc.add_options()
             ("help","print this info")

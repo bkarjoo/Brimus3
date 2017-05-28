@@ -3,6 +3,7 @@
 //
 
 #include "launch_rules.h"
+#include <boost/algorithm/string/replace.hpp>
 using namespace std;
 
 launch_rules::bdate launch_rules::convert_to_gregorian(std::string primusDate) {
@@ -41,6 +42,12 @@ launch_rules::bdate launch_rules::convert_to_gregorian(std::string primusDate) {
 string launch_rules::parse_launch_rules(std::string launchRules) {
     // launch rules is a copy
     int i=0; char c; string results;
+    boost::algorithm::replace_all(launchRules,"AND","&&");
+    boost::algorithm::replace_all(launchRules,"OR","||");
+    boost::algorithm::replace_all(launchRules,"And","&&");
+    boost::algorithm::replace_all(launchRules,"Or","||");
+    boost::algorithm::replace_all(launchRules,"and","&&");
+    boost::algorithm::replace_all(launchRules,"or","||");
     while(i<launchRules.size()) {
         c=launchRules[i++];
         if (c=='#'){
@@ -50,7 +57,8 @@ string launch_rules::parse_launch_rules(std::string launchRules) {
             bdate date = convert_to_gregorian(one_date);
             int julian= date.julian_day();
             results += to_string(julian);
-        } else
+        }
+        else
             results += c;
     }
     return results;
@@ -68,4 +76,20 @@ string launch_rules::get_launch_rule(const std::string &basic_string, int &i) {
     return lr;
 }
 
+void launch_rules::set_claculator(std::string launch_rules) {
+    vars = make_unique<TokenMap>();
+    (*vars)["CurrentDate"] = 0;
+    rules = make_unique<calculator>();
+    rules_str = launch_rules;
+}
+
+bool launch_rules::is_run_date(launch_rules::bdate date) {
+    // TODO: need to convert the date to julian
+    int jDate = date.julian_day();
+    // TODO: need to set it as a var
+    (*vars)["CurrentDate"] = jDate;
+    // TODO: nned to call calculate
+    packToken results = rules->calculate(rules_str.c_str(),*vars);
+    return results.asBool();
+}
 

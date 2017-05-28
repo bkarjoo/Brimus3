@@ -48,3 +48,13 @@ TEST(launchRulesTests, replaceWithJulian) {
     string s3 = lr.parse_launch_rules(s1);
     EXPECT_EQ(s2,s3);
 }
+
+TEST(launchRulesTests, shuntingYardTest) {
+    string s1 = "(CurrentDate >= #2011-03-14# && CurrentDate <= #2011-05-17#)";
+    launch_rules lr;
+    string sParse = lr.parse_launch_rules(s1);
+    lr.set_claculator(sParse);
+    // TODO: make the function to test against the calculator
+    boost::gregorian::date d1(2011,3,14);
+    EXPECT_EQ(true,lr.is_run_date(d1));
+}

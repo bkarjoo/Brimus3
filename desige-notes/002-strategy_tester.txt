@@ -1,5 +1,14 @@
 * save the name of the files
 * save the name of the director
+* run loads all the rules . . .
+// TODO print command prints every tick
+// TODO but they're useless, must be processed
+// TODO process means convert to cparser form
+// TODO basket processed
+// TODO basket rules processed
+// TODO launch rules processed
+// TODO order rules processed
+// TODO variables and functions identified
 
 future iterations :
 parses the input files using input_file_parser class

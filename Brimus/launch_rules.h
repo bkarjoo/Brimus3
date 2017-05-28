@@ -17,12 +17,18 @@
  */
 class launch_rules {
     typedef boost::gregorian::date bdate;
-
+    std::unique_ptr<calculator> rules;
+    std::unique_ptr<TokenMap> vars;
+    std::string rules_str;
 public:
     bdate convert_to_gregorian(std::string primusDate);
     std::string parse_launch_rules(std::string launchRules);
-
     std::string get_launch_rule(const std::string &basic_string, int &i);
+
+    void set_claculator(std::string launch_rules);
+    // TODO : in gtest test using the set calculator
+    // TODO : make function bool run_today(boost::gregorian::date)
+    bool is_run_date(bdate date);
 };
 
 
